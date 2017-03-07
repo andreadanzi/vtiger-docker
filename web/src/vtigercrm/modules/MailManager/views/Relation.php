@@ -222,6 +222,25 @@ class MailManager_Relation_View extends MailManager_Abstract_View {
 									$recordModel->set('creator', $currentUserModel->getId());
 									$recordModel->set('related_to', $parent);
 									break;
+                // danzi.tn@20170307 link to 'Project','Potentials'
+				case 'Potentials' :   $from = $mail->from();
+									if ($parent) {
+										if($linkedto['module'] == 'Contacts') {
+											$referenceFieldName = 'contact_id';
+										} elseif ($linkedto['module'] == 'Accounts') {
+											$referenceFieldName = 'related_to';
+										}
+									}
+									$recordModel->set($referenceFieldName, $this->setParentForHelpDesk($parent, $from));
+									break;
+                
+				case 'Project' :   $from = $mail->from();
+									if ($parent) {
+										$referenceFieldName = 'linktoaccountscontacts';
+									}
+									$recordModel->set($referenceFieldName, $this->setParentForHelpDesk($parent, $from));
+									break;
+                // danzi.tn@20170307e
 			}
 
 			try {
@@ -311,16 +330,20 @@ class MailManager_Relation_View extends MailManager_Abstract_View {
 	 * @return Integer - Parent(crmid)
 	 */
 	public function setParentForHelpDesk($parent, $from) {
+	    global $log;
+	    $log->debug("setParentForHelpDesk on parent ". $parent . " and from " . $from );
 		$currentUserModel = Users_Record_Model::getCurrentUserModel();
 		if(empty($parent)) {
 			if(!empty($from)) {
 				$parentInfo = MailManager::lookupMailInVtiger($from[0], $currentUserModel);
 				if(!empty($parentInfo[0]['record'])) {
 					$parentId = vtws_getIdComponents($parentInfo[0]['record']);
+					$log->debug("parent is empty => return parentId=" . $parentId[1] );
 					return $parentId[1];
 				}
 			}
 		} else {
+		    $log->debug("parent not empty return " . $parent );
 			return $parent;
 		}
 	}
@@ -374,11 +397,14 @@ class MailManager_Relation_View extends MailManager_Abstract_View {
 	 * @return string
 	 */
 	public function linkToAvailableActions() {
-		$moduleListForLinkTo = array('Calendar','HelpDesk','ModComments','Emails');
+	    // danzi.tn@20170307 link to 'Project','Potentials'
+	    global $log;
+		$moduleListForLinkTo = array('Calendar','HelpDesk','ModComments','Emails','Project','Potentials');
 
 		foreach($moduleListForLinkTo as $module) {
 			if(MailManager::checkModuleWriteAccessForCurrentUser($module)) {
 				$mailManagerAllowedModules[] = $module;
+				$log->debug("linkToAvailableActions for module ".  $module);
 			}
 		}
 		return $mailManagerAllowedModules;

@@ -1,0 +1,13 @@
+presidente
+direttore
+staff           
+sales.manager   
+tec.manager     
+tecnico         
+vendite         
+agente
+consulente
+
+eurostaff
+commesso
+responsabile

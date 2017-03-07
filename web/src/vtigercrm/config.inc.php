@@ -103,7 +103,7 @@ $upload_dir = 'cache/upload/';
 
 // maximum file size for uploaded files in bytes also used when uploading import files
 // upload_maxsize default value = 3000000
-$upload_maxsize = 3000000;
+$upload_maxsize = 5242880;
 
 // flag to allow export functionality
 // 'all' to allow anyone to use exports 
@@ -189,7 +189,7 @@ $disable_stats_tracking = false;
 $application_unique_key = 'dc66d1a8b837fd5771a6ce148834c0a6';
 
 // trim descriptions, titles in listviews to this value
-$listview_max_textlength = 40;
+$listview_max_textlength = '40';
 
 // Maximum time limit for PHP script execution (in seconds)
 $php_max_execution_time = 0;
