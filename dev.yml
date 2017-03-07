@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+
+  vtiger-backend:
+    ports:
+      - 8888:80
+
+  vtiger-db-mysql:
+    ports:
+      - 3386:3306

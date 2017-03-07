@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+
+  vtiger-backend:
+    restart: always
+    ports:
+      - 8888:80
+
+  vtiger-db-mysql:
+    restart: always
+    ports:
+      - 3386:3306
+    volumes:
+      - /data/vtiger-mysql-bridge/datadir:/var/lib/mysql
+      - ./sql:/docker-entrypoint-initdb.d
