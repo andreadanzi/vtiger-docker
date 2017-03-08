@@ -1,4 +1,3 @@
 web/src/vtigercrm/logs/
 web/src/vtigercrm/test/templates_c/
 *.tpl.php
-web/src/vtigercrm/user_privileges/
