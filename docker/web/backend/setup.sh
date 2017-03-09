@@ -12,3 +12,6 @@ apt-get install -y libpng12-dev libjpeg-dev libkrb5-dev vim ssh sendmail \
     && docker-php-ext-install imap opcache \
     && rm -rf /var/lib/apt/lists/*
 
+apt-get update
+
+apt-get install -y cron
