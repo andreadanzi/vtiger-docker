@@ -5,14 +5,23 @@ build: ## Builds docker images from the current project files
 
 up-dev: ## Creates and starts the docker containers with development settings
 	docker-compose -f docker-compose.yml -f dev.yml up -d
+	docker-compose exec vtiger-backend /opt/bin/sethosts.sh
+	docker-compose exec vtiger-backend /etc/init.d/sendmail restart
+	docker-compose exec vtiger-backend service cron restart
 	docker-compose ps
 
 up-prod: build ## Creates and starts the docker containers with production settings
 	docker-compose -f docker-compose.yml -f prod.yml up -d
+	docker-compose exec vtiger-backend /opt/bin/sethosts.sh
+	docker-compose exec vtiger-backend /etc/init.d/sendmail restart
+	docker-compose exec vtiger-backend service cron restart
 	docker-compose ps
 
 up-install: build ## Creates and starts the docker containers with production settings and fresh db 
 	docker-compose -f docker-compose.yml -f install.yml up -d
+	docker-compose exec vtiger-backend /opt/bin/sethosts.sh
+	docker-compose exec vtiger-backend /etc/init.d/sendmail restart
+	docker-compose exec vtiger-backend service cron restart
 	docker-compose ps
 
 
