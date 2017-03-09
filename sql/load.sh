@@ -1,2 +1,2 @@
 #!/bin/bash
-mysql -u root --port=3386 --protocol=tcp -p vtiger < vtiger.sql
+mysql -u root --port=3386 --protocol=tcp -p vtiger < $1
