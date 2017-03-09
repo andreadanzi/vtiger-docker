@@ -46,12 +46,14 @@
 					</div>
 				</div>
 				<div class="span9">
+					<!-- danzi.tn@20170309 hide helpLinks
 					<div class="helpLinks">
 						<a href="https://www.vtiger.com">Vtiger Website</a> | 
 						<a href="https://wiki.vtiger.com/vtiger6/">Vtiger Wiki</a> | 
 						<a href="https://www.vtiger.com/crm/videos/">Vtiger videos </a> | 
 						<a href="https://discussions.vtiger.com/">Vtiger Forums</a> 
 					</div>
+					-->
 				</div>
 			</div>
 			<div class="row-fluid">
@@ -60,6 +62,7 @@
 						<div class="container-fluid">
 							<div class="row-fluid">
 								<div class="span6">
+									<!-- danzi.tn@20170309 hide carousal-container
 									<div class="carousal-container">
 										<div><h2> Get more out of Vtiger </h2></div>
 										<ul class="bxslider">
@@ -95,6 +98,7 @@
 											</li>
 										</ul>
 									</div>
+									-->
 								</div>
 								<div class="span6">
 									<div class="login-area">

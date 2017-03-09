@@ -31,6 +31,8 @@ class ExtensionStore_Listings_View extends Vtiger_Index_View{
         $viewer = $this->getViewer($request);
         $viewer->assign('PROMOTIONS', $promotions);
         $viewer->assign('QUALIFIED_MODULE', $qualifiedModuleName);
-        $viewer->view('Promotions.tpl', $qualifiedModuleName);
+        /** danzi.tn@20170309 remove extension banner
+	$viewer->view('Promotions.tpl', $qualifiedModuleName);
+	*/
     }
 }
