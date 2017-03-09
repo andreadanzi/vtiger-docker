@@ -637,6 +637,26 @@ function vtlib_purify($input, $ignore=false) {
 	    	$config->set('Core', 'Encoding', $use_charset);
 	    	$config->set('Cache', 'SerializerPath', "$use_root_directory/test/vtlib");
 
+	    	// danzi.tn@20170308 embed HTML5 and other nice stuff
+            // HTML5
+            $config->set('HTML.Doctype', 'HTML 4.01 Transitional');
+            $config->set('CSS.AllowTricky', true);
+            $config->set('Cache.SerializerPath', '/tmp');
+            //embed
+            $config->set('HTML.SafeEmbed',true);
+            $config->set('HTML.SafeObject',true);
+            // Allow iframes from:
+            // o YouTube.com
+            // o Vimeo.com
+            $config->set('HTML.SafeIframe', true);
+            $config->set('URI.SafeIframeRegexp', '%^(http:|https:)?//(www.youtube(?:-nocookie)?.com/embed/|player.vimeo.com/video/)%');
+            $config->set('HTML.Allowed', implode(',', $allowed));
+            // Set some HTML5 properties
+            $config->set('HTML.DefinitionID', 'html5-definitions'); // unqiue id
+            $config->set('HTML.DefinitionRev', 1);
+	    	// danzi.tn@20170308e
+
+
 			$__htmlpurifier_instance = new HTMLPurifier($config);
 		}
 		if($__htmlpurifier_instance) {
