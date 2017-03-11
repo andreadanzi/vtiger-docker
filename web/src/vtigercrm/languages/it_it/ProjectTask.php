@@ -15,6 +15,7 @@ $languageStrings = array(
 	'LBL_PROJECTS_LIST'	=>	"Elenco Progetti",
 	'LBL_TASKS_LIST'	=>	"Elenco Tasks",
 	'LBL_MILESTONES_LIST'	=>	"Lista Milestones",
+	'Documents'                    => 'Documenti'                   , 
 	'Task Name'	=>	"Nome Task",
 	'Project Task Name'	=>	"Nome Task",
 	'Project Task No'	=>	"No Task",

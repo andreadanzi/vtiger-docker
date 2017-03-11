@@ -16,6 +16,7 @@ $languageStrings = array(
 	'Project Name'                 => 'Nome Progetto'               , 
 	'Start Date'                   => 'Data di Inizio'              , 
 	'Target End Date'              => 'Termine Previsto'             , 
+	'Documents'                    => 'Documenti'                   , 
 	'Actual End Date'              => 'Termine Reale'             , 
 	'Project No'                   => 'Numero Progetto'              , 
 	'Target Budget'                => 'Budget Previsto'               , 
