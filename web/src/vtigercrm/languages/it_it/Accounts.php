@@ -8,10 +8,10 @@
  * All Rights Reserved.
  ************************************************************************************/
 $languageStrings = array(
-	'Accounts'                     => 'Azienda'              , 
+	'Accounts'                     => 'Aziende'              , 
 	'SINGLE_Accounts'              => 'Azienda'              , 
 	'LBL_ADD_RECORD'               => 'Aggiungi Azienda'     , 
-	'LBL_RECORDS_LIST'             => 'lista Aziende'        , 
+	'LBL_RECORDS_LIST'             => 'Lista Aziende'        , 
 	'LBL_ACCOUNT_INFORMATION'      => 'Informazioni Azienda' , 
 	'LBL_SHOW_ACCOUNT_HIERARCHY'   => 'Visualizza la gerarchia'    , 
 	'industry'                     => 'Industria'                   , 
