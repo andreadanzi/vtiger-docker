@@ -11,6 +11,7 @@ $languageStrings = array(
 	'SINGLE_Project'               => 'Progetto'                    , 
 	'LBL_ADD_RECORD'               => 'Nuovo Progetto'                 , 
 	'LBL_RECORDS_LIST'             => 'Lista Progetti'               , 
+	'Related to' => 'Collegato a',
 	'LBL_PROJECT_INFORMATION'      => 'Informazioni Progetto'       , 
 	'Project Name'                 => 'Nome Progetto'               , 
 	'Start Date'                   => 'Data di Inizio'              , 
