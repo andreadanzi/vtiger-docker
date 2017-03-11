@@ -133,7 +133,7 @@ $jsLanguageStrings = array(
 	'LBL_NOV' => 'Nov',
 	'LBL_DEC' => 'Dic',
 	
-	'LBL_ALL_DAY' => 'Giornata-intera',
+	'LBL_ALL_DAY' => 'Tutto il giorno',
 	
 	'Mobile Call' => 'Chiamata su Mobile',
 	//End
