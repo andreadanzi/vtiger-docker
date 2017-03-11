@@ -38,6 +38,14 @@ $languageStrings = array(
 	'LBL_DUPLICATES_EXIST'         => 'Nome organizzazione esiste già', 
 	'LBL_COPY_SHIPPING_ADDRESS'    => 'Copiare lindirizzo di spedizione'       ,
 	'LBL_COPY_BILLING_ADDRESS'     => 'Copiare lindirizzo di fatturazione'        ,
+	'Billing City' => 'Città (fatt.)',
+	'Billing Country' => 'Stato (fatt.)',
+	'Billing State' => 'Provincia (fatt.)',
+	'Billing Code' => 'CAP (fatt.)',
+	'Shipping City' => 'Città (sped.)',
+	'Shipping State' => 'Provincia (sped.)',
+	'Shipping Postal Code' => 'CAP (sped.)',
+	'Shipping Country' => 'Stato (sped.)',
 );
 $jsLanguageStrings = array(
 	'LBL_RELATED_RECORD_DELETE_CONFIRMATION' => 'Sei sicuro di che voler eliminare?', 
