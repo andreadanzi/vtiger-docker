@@ -130,7 +130,7 @@ $limitpage_navigation = '5';
 $history_max_viewed = '5';
 
 // default_module default value = Home
-$default_module = 'Home';
+$default_module = 'MailManager';
 
 // default_action default value = index
 $default_action = 'index';
